@@ -1,0 +1,168 @@
+header {
+	@include box;
+	background-image: url(../images/main/main-banner.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	width: 100vw;
+	min-height: 656px;
+	.layout {
+		nav{
+			height: 88px;
+			.upper-nav {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 12px;
+				.color-nav {
+					ul{
+					display: flex;
+					li {@include upper-nav;
+						padding: 4px 8px;
+						margin-right: 4px;
+						border-radius: 5px;
+						&:nth-child(1)  {
+							background-color: rgba(94, 158, 2, 0.1);
+							a{
+								color: rgba(94, 158, 2, 1);
+							}
+						}
+						&:nth-child(2) {
+							background-color: rgba(2, 64, 158, 0.1);
+							a{
+								color: rgba(2, 64, 158, 1);
+							}
+						}
+						&:nth-child(3){
+							background-color: rgba(191, 80, 2, 1);
+							a{
+								color: #fff;
+							}
+						}
+						&:nth-child(4){
+							background-color: rgba(157, 37, 164, 0.1);
+							a{
+								color: rgba(157, 37, 164, 1);
+							}
+						}
+						&:nth-child(5){
+							background-color: rgba(248, 164, 5, 0.1);
+							a{
+								color: rgba(248, 164, 5, 1);
+								margin-right: 0;
+							}
+						}
+					}
+					}
+				}
+				.info-nav {
+					ul{
+					display: flex;
+						li{
+							@include upper-nav;
+							margin-right: 20px;
+							&:nth-child(3){
+								margin-right: 30px;
+							}
+							&:nth-child(4){
+								position: relative;
+								margin-right: 0;
+								&::after{
+									content: "";
+									width: 4px;
+									height: 4px;
+									border-radius: 50%;
+									background-color: $colorNavUpper;
+									position: absolute;
+									top: 11px;left: -15px;
+								}
+							}
+							a{
+								color: $colorNavUpper;
+							}
+						}
+					}
+				}
+				.contactForCommunication {
+					ul{
+						display: flex;
+						align-items: center;
+						li{
+							&:nth-child(1){
+								@include weight7;
+								margin-right: 16px;
+								a{	
+									color: rgba(62, 68, 73, 1);
+								}
+							}
+							&:nth-child(2){
+								@include upper-nav;
+								margin-right: 36px;
+								a{
+									color: $colorNavUpper;
+								}
+							}
+							&:nth-child(3){
+								margin-right: 16px;
+							}
+						}
+					}
+				}
+
+			}
+			.midle-nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 17px;
+				.logotype {
+					display: block;
+					img{
+						position: relative;
+					}
+				}
+				.links-nav {
+					ul{
+						display: flex;
+						li{
+							margin-right: 24px;
+							@include weight6;
+							a{
+								color: $colorTBlack;
+							}
+
+							&:last-child{
+								margin-right: 0px;
+							}
+						}
+					}
+				}
+				.shoping-cart {
+					ul{
+						display: flex;
+						li{	
+							@include weight5;
+							display: flex;
+							margin-right: 30px;
+							&:last-child{
+								margin-right: 0;
+							}
+							a{
+								color: $colorTBlack;
+								img{
+									width: 32px;
+									height: 32px;
+									margin-right: 7px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
+
+
+
+

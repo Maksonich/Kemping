@@ -1,0 +1,400 @@
+/* SCSS Compiled */
+/***************************************************              GENERAL RESET STYLES             ***************************************************/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*:focus {
+  outline: none; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  border-style: none;
+  max-width: 100%; }
+
+form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
+input, textarea, select {
+  vertical-align: middle;
+  color: #000;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+input::-webkit-input-placeholder {
+  color: #000; }
+
+input:focus::-webkit-input-placeholder {
+  color: #000; }
+
+/*
+@media (min-width: 1921px){}
+@media (width: 1920px){}
+@media (min-width: 1440px) and (max-width: 1919px) {}
+@media (min-width: 1360px) and (max-width: 1439px) {}
+@media (min-width: 1280px) and (max-width: 1359px) {}
+@media (min-width: 1024px) and (max-width: 1279px) {}
+@media (min-width: 768px) and (max-width: 1023px) {}
+@media (min-width: 375px) and (max-width: 767px) {}
+@media (min-width: 320px) and (max-width: 374px) {}
+*/
+/*
+@media (max-width: 1919px) {}
+@media (max-width: 1439px) {}
+@media (max-width: 1279px) {}
+@media (max-width: 767px) {}
+*/
+/*usage  @include font-size(13);*/
+/* Brand Colors ------------------------------------------------*/
+#wrapper,
+main,
+#content,
+#sidebar,
+aside,
+section {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto; }
+
+.layout {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
+  width: 1392px;
+  margin: 0 auto; }
+
+header {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
+  background-image: url(../images/main/main-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  width: 100vw;
+  min-height: 656px; }
+  header .layout nav {
+    height: 88px; }
+    header .layout nav .upper-nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      margin-top: 12px; }
+      header .layout nav .upper-nav .color-nav ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        header .layout nav .upper-nav .color-nav ul li {
+          font-family: 'Gilroy';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          color: #666F78;
+          padding: 4px 8px;
+          margin-right: 4px;
+          border-radius: 5px; }
+          header .layout nav .upper-nav .color-nav ul li:nth-child(1) {
+            background-color: rgba(94, 158, 2, 0.1); }
+            header .layout nav .upper-nav .color-nav ul li:nth-child(1) a {
+              color: #5e9e02; }
+          header .layout nav .upper-nav .color-nav ul li:nth-child(2) {
+            background-color: rgba(2, 64, 158, 0.1); }
+            header .layout nav .upper-nav .color-nav ul li:nth-child(2) a {
+              color: #02409e; }
+          header .layout nav .upper-nav .color-nav ul li:nth-child(3) {
+            background-color: #bf5002; }
+            header .layout nav .upper-nav .color-nav ul li:nth-child(3) a {
+              color: #fff; }
+          header .layout nav .upper-nav .color-nav ul li:nth-child(4) {
+            background-color: rgba(157, 37, 164, 0.1); }
+            header .layout nav .upper-nav .color-nav ul li:nth-child(4) a {
+              color: #9d25a4; }
+          header .layout nav .upper-nav .color-nav ul li:nth-child(5) {
+            background-color: rgba(248, 164, 5, 0.1); }
+            header .layout nav .upper-nav .color-nav ul li:nth-child(5) a {
+              color: #f8a405;
+              margin-right: 0; }
+      header .layout nav .upper-nav .info-nav ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        header .layout nav .upper-nav .info-nav ul li {
+          font-family: 'Gilroy';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          color: #666F78;
+          margin-right: 20px; }
+          header .layout nav .upper-nav .info-nav ul li:nth-child(3) {
+            margin-right: 30px; }
+          header .layout nav .upper-nav .info-nav ul li:nth-child(4) {
+            position: relative;
+            margin-right: 0; }
+            header .layout nav .upper-nav .info-nav ul li:nth-child(4)::after {
+              content: "";
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background-color: #666f78;
+              position: absolute;
+              top: 11px;
+              left: -15px; }
+          header .layout nav .upper-nav .info-nav ul li a {
+            color: #666f78; }
+      header .layout nav .upper-nav .contactForCommunication ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        header .layout nav .upper-nav .contactForCommunication ul li:nth-child(1) {
+          font-family: 'Gilroy';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 24px;
+          margin-right: 16px; }
+          header .layout nav .upper-nav .contactForCommunication ul li:nth-child(1) a {
+            color: #3e4449; }
+        header .layout nav .upper-nav .contactForCommunication ul li:nth-child(2) {
+          font-family: 'Gilroy';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          color: #666F78;
+          margin-right: 36px; }
+          header .layout nav .upper-nav .contactForCommunication ul li:nth-child(2) a {
+            color: #666f78; }
+        header .layout nav .upper-nav .contactForCommunication ul li:nth-child(3) {
+          margin-right: 16px; }
+    header .layout nav .midle-nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 17px; }
+      header .layout nav .midle-nav .logotype {
+        display: block; }
+        header .layout nav .midle-nav .logotype img {
+          position: relative; }
+      header .layout nav .midle-nav .links-nav ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        header .layout nav .midle-nav .links-nav ul li {
+          margin-right: 24px;
+          font-family: 'Gilroy';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 32px; }
+          header .layout nav .midle-nav .links-nav ul li a {
+            color: #000; }
+          header .layout nav .midle-nav .links-nav ul li:last-child {
+            margin-right: 0px; }
+      header .layout nav .midle-nav .shoping-cart ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        header .layout nav .midle-nav .shoping-cart ul li {
+          font-family: 'Gilroy';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 32px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin-right: 30px; }
+          header .layout nav .midle-nav .shoping-cart ul li:last-child {
+            margin-right: 0; }
+          header .layout nav .midle-nav .shoping-cart ul li a {
+            color: #000; }
+            header .layout nav .midle-nav .shoping-cart ul li a img {
+              width: 32px;
+              height: 32px;
+              margin-right: 7px; }
+
+footer {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
+  padding: 46px 0 41px 0;
+  background-color: #fafafb; }
+  footer .layout .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    footer .layout .content ul {
+      margin-bottom: 42px; }
+      footer .layout .content ul li {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 12px; }
+        footer .layout .content ul li a {
+          color: #666f78; }
+        footer .layout .content ul li:first-child {
+          font-family: 'Gilroy';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 32px; }
+          footer .layout .content ul li:first-child a {
+            color: #000; }
+    footer .layout .content ul > li.caption {
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 32px; }
+      footer .layout .content ul > li.caption a {
+        color: #000; }
+  footer .layout .bottom-content {
+    margin-top: 43px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    footer .layout .bottom-content .social-links .social {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      footer .layout .bottom-content .social-links .social li:first-child {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        color: #BF5002;
+        margin-right: 52px; }
+      footer .layout .bottom-content .social-links .social li img {
+        margin-right: 35px; }
+    footer .layout .bottom-content .social-links .link {
+      margin-top: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      footer .layout .bottom-content .social-links .link li {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #666F78;
+        margin-right: 21px; }
+        footer .layout .bottom-content .social-links .link li a {
+          color: #666f78; }
+    footer .layout .bottom-content .author {
+      -ms-flex-item-align: end;
+      align-self: flex-end;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      footer .layout .bottom-content .author span {
+        margin-right: 11px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #666F78; }
+      footer .layout .bottom-content .author img {
+        width: 89px;
+        height: 16px; }
