@@ -8,11 +8,16 @@ header {
 	min-height: 656px;
 	.layout {
 		nav{
-			height: 88px;
+			@media(max-width:768px){
+				display: none;			
+			}
+			height: 324px;
 			.upper-nav {
 				display: flex;
 				justify-content: space-between;
+				align-items: center;
 				margin-top: 12px;
+				position: relative;
 				.color-nav {
 					ul{
 					display: flex;
@@ -20,6 +25,7 @@ header {
 						padding: 4px 8px;
 						margin-right: 4px;
 						border-radius: 5px;
+						
 						&:nth-child(1)  {
 							background-color: rgba(94, 158, 2, 0.1);
 							a{
@@ -51,12 +57,16 @@ header {
 								margin-right: 0;
 							}
 						}
+
 					}
 					}
 				}
 				.info-nav {
 					ul{
 					display: flex;
+						@media(max-width:1102px){
+							display: none;
+						}
 						li{
 							@include upper-nav;
 							margin-right: 20px;
@@ -78,6 +88,89 @@ header {
 							}
 							a{
 								color: $colorNavUpper;
+							}
+						}
+					}
+					ul.menu{
+						display: block;
+						position: absolute;
+						top: 0;left: 50%;
+						z-index: 1;
+						background-color: #fff;
+						padding: 10px;
+						border-radius: 10px;
+						li{
+							display: flex;
+							flex-direction: column;
+							text-align: center;
+							margin: 0;
+							&:nth-child(4){
+							
+								&::after{
+									display: none;
+								}
+							}
+						}
+					}
+					.burger-upper-menu {
+						display: none;
+						@media(max-width:1102px){
+							display: block;
+							width: 35px;
+							height: 30px;
+							background-color: rgb(244, 245, 247);
+							border-radius: 5px;
+						}
+						.burger-upper {
+							display: block;
+							width: 35px;
+							height: 2px;
+							background-color:$colorOrange;
+							position: relative;
+							top: 15px;left: 0;
+							transition-duration: 0.5s;
+							&::before{
+								content: "";
+								width: 35px;
+								height: 2px;
+								background-color: $colorOrange;
+								position: absolute;
+								top: 8px;left: 0;
+								transition-duration: 0.5s;
+							}
+							&::after{
+								content: "";
+								width: 35px;
+								height: 2px;
+								background-color: $colorOrange;
+								position: absolute;
+								top: -8px;left: 0;
+								transition-duration: 0.3s;
+							}
+						}
+						.burger-upper.cross{
+							position: relative;
+							top: 12px;left: -12px;
+							transform: rotate(135deg);
+							z-index: 999;
+							width: 30px;
+							&::before{
+								content: "";
+								width: 30px;
+								height: 2px;
+								background-color: $colorOrange;
+								position: absolute;
+								top: 0px;left: 0;
+								transform: rotate(90deg);
+							}
+							&::after{
+								content: "";
+								opacity: 0;
+								width: 3px;
+								height: 2px;
+								background-color: $colorOrange;
+								position: absolute;
+								top: -8px;left: 0;
 							}
 						}
 					}
@@ -109,7 +202,7 @@ header {
 				}
 
 			}
-			.midle-nav {
+			.middle-nav {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -123,24 +216,111 @@ header {
 				.links-nav {
 					ul{
 						display: flex;
+						@media(max-width:1277px){
+								display: none;
+							}
 						li{
 							margin-right: 24px;
 							@include weight6;
 							a{
 								color: $colorTBlack;
 							}
-
 							&:last-child{
 								margin-right: 0px;
+							}
+							
+						}
+						
+						
+					}
+					ul.menu{
+						display: block;
+						position: absolute;
+						top: 85px;left: 45%;
+						z-index: 1;
+						background-color: #fff;
+						padding: 10px;
+						border-radius: 10px;
+						li{
+							display: flex;
+							flex-direction: column;
+							text-align: center;
+							margin: 0;
+							
+						}
+					}
+					.burger-menu-middle {
+						display: none;
+						@media(max-width:1277px){
+							display: block;
+							width: 35px;
+							height: 30px;
+							background-color: rgb(244, 245, 247);
+							border-radius: 5px;
+						}
+						.burger-middle {
+							display: block;
+							width: 35px;
+							height: 2px;
+							background-color:$colorOrange;
+							position: relative;
+							top: 15px;left: 0;
+							transition-duration: 0.5s;
+							
+							&::before{
+								content: "";
+								width: 35px;
+								height: 2px;
+								background-color: $colorOrange;
+								position: absolute;
+								top: 8px;left: 0;
+								transition-duration: 0.5s;
+							}
+							&::after{
+								content: "";
+								width: 35px;
+								height: 2px;
+								background-color: $colorOrange;
+								position: absolute;
+								top: -8px;left: 0;
+								transition-duration: 0.3s;
+							}
+						}
+						.burger-middle.cross{
+							position: relative;
+							top: 20px;left: 0;
+							transform: rotate(135deg);
+							z-index: 999;
+							&::before{
+								content: "";
+								width: 35px;
+								height: 2px;
+								background-color: $colorOrange;
+								position: absolute;
+								top: 0px;left: 0;
+								transform: rotate(90deg);
+
+							}
+							&::after{
+								content: "";
+								opacity: 0;
+								width: 35px;
+								height: 2px;
+								background-color: $colorOrange;
+								position: absolute;
+								top: -8px;left: 0;
 							}
 						}
 					}
 				}
 				.shoping-cart {
 					ul{
+						
 						display: flex;
+						align-items: center;
 						li{	
 							@include weight5;
+							align-items: center;
 							display: flex;
 							margin-right: 30px;
 							&:last-child{
@@ -153,6 +333,9 @@ header {
 									height: 32px;
 									margin-right: 7px;
 								}
+							}
+							img{
+								margin-top: 10px;
 							}
 						}
 					}
