@@ -12,7 +12,14 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
-  color: #666F78;
+  a{
+    color: #666F78;
+    transition-duration: 0.5s;
+    &:hover{
+      color: $colorOrange;
+    }
+  }
+  
 }
 
 @mixin weight7{

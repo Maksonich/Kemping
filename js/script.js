@@ -21,4 +21,17 @@ document.querySelectorAll(".accordion").forEach((item)=>
        const acord = item.parentElement;
             acord.classList.toggle("accordion-falling-out");
        })
-) 
+) ;
+/////// popular-accommodation show more
+document.querySelector(".onwards-one").addEventListener("click", function() {
+    document.querySelector(".none-one").className = "block-one";
+    document.querySelector(".onwards-one").classList.add("none-one");
+})
+//
+document.querySelector(".onwards-three").addEventListener("click", function() {
+   let block = document.querySelectorAll(".none-three")
+   for (const item of block){
+    item.className = "block-one";
+   }
+    document.querySelector(".onwards-three").classList.add("none-one");
+})

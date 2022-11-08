@@ -1,0 +1,29 @@
+.avantage {
+    margin-top: 115px;
+    .layout {
+        .content {
+            ul{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                li{
+                    justify-items: center;
+                    .img-block {
+                        display: block;
+                        img{
+                            position: relative;
+                        }
+                    }
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 32px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+

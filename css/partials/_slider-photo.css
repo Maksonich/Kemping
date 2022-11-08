@@ -1,0 +1,6 @@
+.slider-photo {
+  background-color: #fafafb; }
+  .slider-photo .layout ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }

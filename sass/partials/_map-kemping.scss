@@ -1,0 +1,149 @@
+.map-kemping{
+    margin-top: 96px;
+    .layout{
+        height: 704px;
+        .content {
+            display: flex;
+            background: #FAFAFB;
+            border-radius: 20px;
+            .map {
+                position: relative;
+                width: 927px;
+                height:704px;
+                h3{
+                    position: absolute;
+                    top: 35px;
+                    left: 46px;
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 48px;
+                    line-height: 58px;
+                    color: #333333;
+                    z-index: 2;
+                }
+                span{
+                    position: absolute;
+                    top: 112px;
+                    left: 47px;
+                    padding: 17px 30px;
+                    background: #BF5002;
+                    border-radius: 10px;
+                    width: 159px;
+                    height: 56px;
+                    z-index: 2;
+                    color: #fff;
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 24px;
+                    cursor: pointer;
+                    img{
+                        margin-right: 5px;
+                    }
+                }
+               .map-img{
+                    width: 927px;
+                    height:704px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+               }
+            }
+            .right-sidebar {
+                
+                ul.rooms{
+                    display: flex;
+                    position: relative;
+                    padding: 48px 0 0 48px;
+                    li{ 
+                        width:212px;
+                        height:160px;
+                        margin-right: 40px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    button{
+                        position: absolute;
+                        top: 50%;
+                        left: 270px;
+                        width: 56px;
+                        height: 56px;
+                        border-radius: 50%;
+                        border: none;
+                    }
+                }
+                .description-room {
+                    margin-top: 31px;
+                    padding: 0 0 0 48px;
+                    h5{
+                       font-family: 'Gilroy';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 22px;
+                        line-height: 36px; 
+                        margin-bottom: 5px;
+                    }
+                    span{
+                        font-family: 'Gilroy';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-bottom: 8px;
+                    }
+                    p{
+                        font-family: 'Gilroy';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 24px;
+                        color: #666F78;
+                        max-width: 375px;
+                    }
+                }
+                ul.reports {
+                    margin-top: 38px;
+                    li{     
+                            padding: 15px 0;
+                            border-top: 1px solid rgba(230, 230, 230, 1);
+                            display: flex;
+                            align-items: center;
+                            .descript {
+                                font-family: 'Gilroy';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 24px;
+                                margin-left: 48px;
+                                .data {
+                                    display: block;
+                                }
+                                
+                            }
+                            .arrow-right {
+                                margin-left: 82px;
+                               a{
+                                padding: 12px 12px;
+                                background-color: $colorOrange;
+                                border-radius: 10px;
+                                img{
+                                    position: relative;
+                                }
+                               }
+                               
+                            }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,57 @@
+.category-people {
+    margin-top: 96px;
+    .layout {
+        overflow: visible;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            
+            li{
+                    height: 136px;
+                    margin-right: 24px;
+                    width: 25%;
+                    display: flex;
+                    justify-content: space-between;
+                    border-radius: 20px;
+                    background-color: rgba(251, 243, 237, 1);
+                    position: relative;
+                    overflow: visible;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    .left-block {
+                        h4{
+                            margin: 28px  0 22px 24px  ;
+                           
+                           font-family: 'Gilroy';
+                            font-style: normal;
+                            font-weight: 800;
+                            font-size: 22px;
+                            line-height: 36px;
+                            a{
+                             color: rgba(191, 80, 2, 1);   
+                            }
+                        }
+                        .arrow {
+                            margin: 12px 0  28px 30px;
+                        }
+                    }
+                    .img-block {
+                        // width: 220px;
+                        height: 150px;
+                        
+                        img{
+                            
+                           display: block
+                        }
+                    }
+                
+               
+            }
+        }
+       
+    }
+}
+
+
+

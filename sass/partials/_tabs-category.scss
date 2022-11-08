@@ -1,0 +1,59 @@
+.tabs-category {
+    margin-top: 94px;
+    .layout {
+       .tabs-popular-accommodation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+            .tabs-link{
+                display: flex;
+                h3{
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 36px;
+                    color: #000000;
+                    margin: 0 40px 38px 0;
+                    cursor: pointer;
+                    &:hover{
+                        color: $colorOrange;
+                        
+                    }
+                }
+                h3.active{
+                    color: $colorOrange;
+                }
+            }
+            ul.tabs-two,
+            ul.tabs-three,
+            ul.tabs-one {
+            display: flex;
+            justify-content: space-between;
+            
+            width: 100%;
+            li{
+                width: 222px;
+                height: 222px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    padding: 12px;
+                }
+            }
+            li.big{
+                width: 450px;
+                height: 450px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+                
+            }
+            
+        } 
+    }
+}
+
+

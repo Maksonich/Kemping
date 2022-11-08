@@ -1,0 +1,96 @@
+.popular-accommodation {
+    margin-top: 76px;
+    .layout{
+        h3{
+            text-align: center;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 56px;
+            margin-bottom: 52px;
+        }
+        ul{
+            
+            display: flex;
+            justify-content: space-between;
+            li{
+                // height: 160px;
+                display: flex;
+                .img-room{
+                    margin-right: 24px;
+                    height: 160px;
+                    width: 212px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                    }
+                }
+                .description{
+                    display: flex;
+                    flex-direction: column;
+                    h4{
+                        font-family: 'Gilroy';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 22px;
+                        line-height: 36px;
+                        margin-bottom: 4px;
+                    }
+                    span{
+                        margin-top: 4px;
+                        font-family: 'Gilroy';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-bottom: 8px;
+                    }
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        &:first-child,
+                        &:last-child{
+                            li:nth-child(2){
+                                color: rgba(102, 111, 120, 1);
+                            }
+                            
+                        }
+                        li{
+                            @include weight4;
+                            margin-bottom: 5px;
+
+                        }
+                        
+                        li.onwards-one,
+                        li.onwards-three{
+                            color: $colorOrange;
+                            font-family: 'Gilroy';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 16px;
+                            line-height: 24px;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                        li.none-one{
+                            display: none;
+                        }
+                        li.none-three{
+                            display: none;
+                        }
+                        li.block-one{
+                            display: block;
+                        }
+                        li.block-three{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

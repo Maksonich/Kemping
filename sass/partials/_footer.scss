@@ -3,9 +3,16 @@ footer {
 	padding: 46px 0 41px 0;
 	background-color: rgba(250, 250, 251, 1);
 	.layout{
+
 		.content {
 			display: flex;
 			justify-content: space-between;
+			@media (max-width:889px){
+				flex-wrap: wrap;
+			}
+			@media (max-width:768px){
+				display: none;
+			}
 			ul{
 				margin-bottom: 42px;
 				li{
@@ -30,15 +37,25 @@ footer {
 				}
 			}
 		}
+		hr{
+			@media (max-width:768px){
+				display: none;
+			}
+		}
 		.bottom-content {
 			margin-top: 43px;
-
 			display: flex;
 			justify-content: space-between;
+			@media (max-width:768px){
+						justify-content: center;
+			}
 			.social-links {
 				.social {
 					display: flex;
 					align-items: center;
+					@media (max-width:768px){
+						justify-content: center;
+					}
 					li{
 						&:first-child{
 							font-family: 'Gilroy';
@@ -47,6 +64,9 @@ footer {
 							font-size: 24px;
 							color: #BF5002;
 							margin-right: 52px;
+							@media (max-width:768px){
+								display: none;
+							}
 						}
 						img{
 							margin-right: 35px;
@@ -57,11 +77,46 @@ footer {
 					margin-top: 20px;
 					display: flex;
 					align-items: center;
+					@media (max-width:1043px){
+						flex-wrap: wrap;
+					}
+					@media (max-width:768px){
+						flex-direction: column;
+					}
 					li{
 						@include upper-nav;
 						margin-right: 21px;
+						&:first-child{
+						@media (max-width:768px){
+							margin-bottom: 15px;
+						}
+						}
+						
 						a{
 							color: $colorNavUpper;
+						}
+					}
+				}
+				.mobi-author{
+					display: none;
+					@media (max-width:768px){
+						margin-top: 21px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						span{
+							margin-right: 11px;
+							font-family: 'Gilroy';
+							font-style: normal;
+							font-weight: 400;
+							font-size: 14px;
+							line-height: 24px;
+							color: #666F78;
+							white-space: nowrap;
+						}
+						img{
+							width: 89px;
+							height: 16px;
 						}
 					}
 				}
@@ -70,6 +125,15 @@ footer {
 				align-self: flex-end;
 				display: flex;
 				align-items: center;
+				@media (max-width:1043px){
+					flex-wrap: wrap;
+				}
+				@media (max-width:768px){
+						display: none;
+				}
+				&:first-child(1){
+					align-self: stretch;
+				}
 				span{
 					margin-right: 11px;
 					font-family: 'Gilroy';
@@ -78,6 +142,7 @@ footer {
 					font-size: 14px;
 					line-height: 24px;
 					color: #666F78;
+					white-space: nowrap;
 				}
 				img{
 					width: 89px;

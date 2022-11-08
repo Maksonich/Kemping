@@ -1,0 +1,73 @@
+.map-road {
+   width: 100vw;
+    .map-block {
+    }
+    .layout {
+    }
+    .follow-us {
+        background-color: $colorOrange;
+     
+        .layout{   
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           .img-mail {
+            margin-right: 26px;
+            } 
+            h4{
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 29px;
+                display: flex;
+                align-items: center;
+                color: #FFFFFF;
+                width:288px;
+            }
+            form{
+               
+                input{
+                      width:416px;
+                     height:56px;
+                    border: 1px solid #FFFFFF;
+                    border-radius: 10px 0px 0px 10px;
+
+                    padding-left: 17px;
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 24px;
+
+                    background-color:$colorOrange;
+
+                    opacity: 0.4;
+                }
+                button{
+                    
+                    margin-left: -5px;
+                    width:175px;
+                    height:56px;
+                    border: 1px solid #FFFFFF;
+                    cursor: pointer;
+
+
+                    background: #FFFFFF;
+                    border-radius: 0px 10px 10px 0px;
+
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 24px;
+                    color: #BF5002;
+                }
+            }
+        }
+    }
+}
+
+
+
