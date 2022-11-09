@@ -6,11 +6,11 @@
 	<meta name="viewport" content="width=device-width; initial-scale=1">
 	<link rel="stylesheet" href="css/all.css" type="text/css"/>
 	<link rel="stylesheet" href="sass/fonts.css" type="text/css"/>
-	<script type="text/javascript" src="js/jquery-3.2.0.js"></script>
+	<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<title>Kemping</title>
 </head>
-
 <body>
 	<div class="mobile-nav">
 		<div class="mobile-nav-head">
@@ -456,11 +456,10 @@
 							</div>
 						</div>
 						<div class="right-sidebar">
-							<ul class="rooms">
+							<ul class="rooms" id="rooms">
 								<li><img src="./images/main/map-kamping/house1.png" alt="house"></li>
 								<li><img src="./images/main/map-kamping/house.png" alt="house"></li>
 								<li><img src="./images/main/map-kamping/house1.png" alt="house"></li>
-								<button><img src="./images/main/icons/arrow-right-orange.png" alt="arrow-right-orange"></button>
 							</ul>
 							<div class="description-room">
 								<h5>Дом «Центр земли»</h5>
@@ -560,12 +559,15 @@
 			</section>
 			<section class="slider-photo">
 				<div class="layout">
-					<ul>
-						<button><img src="./images/main/icons/arrow-left-orange.png" alt="arrow"></button>
+					<ul id="slid-photo">
+						
 						<li> <img src="./images/main/images-enterteiment/1.png" alt="photo"></li>
 						<li><img src="./images/main/images-enterteiment/2.png" alt="photo"></li>
 						<li><img src="./images/main/images-enterteiment/3.png" alt="photo"></li>
-						<button><img src="./images/main/icons/arrow-right-orange.png" alt="arrow"></button>
+						<li> <img src="./images/main/images-enterteiment/1.png" alt="photo"></li>
+						<li><img src="./images/main/images-enterteiment/2.png" alt="photo"></li>
+						<li><img src="./images/main/images-enterteiment/3.png" alt="photo"></li>
+						
 					</ul>
 				</div>
 			</section>
@@ -573,8 +575,7 @@
 				<div class="layout">
 					<div class="content">
 						<h3>Отзывы гостей</h3>
-						<ul class="comments">
-							<button><img src="./images/main/icons/arrow-left-orange.png" alt="arrow"></button>
+						<ul class="comments" id="comments">
 							<li>
 								<p>На Валдае очень весело! Отдых для детей и взрослых. Свежий воздух, природа, веселье. Все игры поднимают настроение. И в кемпинге работают люди которые приезжают не ради денег и благодаря этому создаётся семейная атмосфера.     </p>
 								<div class="author-and-data">
@@ -587,15 +588,37 @@
 								<div class="author-and-data">
 									<div class="author">Юлия Левченко</div>
 									<div class="data">26.08.2019</div>
-								</div></li>
+								</div>
+							</li>
 							<li>
 								<p>По рекомендациям интернета мы попали в этот замечательный лагерь. Впечатления превзошли все наши ожидания (несмотря на тропические ливни каждый день). Прекрасный коллектив сотрудников. Люди очень ответственные, увлеченные, любящие и понимающие детей, внимательные к взрослым.</p>
 								<div class="author-and-data">
-									<div class="author">Ивановы Тамара, Владимир и внук Андрей</div>
+									<div class="author">Ивановы Тамара, Владимир<br> и внук Андрей</div>
 									<div class="data">21.07.2019</div>
-								</div></li>
+								</div>
 							</li>
-							<button><img src="./images/main/icons/arrow-right-orange.png" alt="arrow"></button>
+							<li>
+								<p>На Валдае очень весело! Отдых для детей и взрослых. Свежий воздух, природа, веселье. Все игры поднимают настроение. И в кемпинге работают люди которые приезжают не ради денег и благодаря этому создаётся семейная атмосфера.     </p>
+								<div class="author-and-data">
+									<div class="author">Клинцова Вера</div>
+									<div class="data">18.07.2020</div>
+								</div>
+							</li>
+							<li>
+								<p>Хочется сказать: спасибо, что вы есть! Со слов дочери выражаем свой восторг и благодарность: Дмитрию, Анне, Полине и всем, всем, всем! Море позитива, заряженность энергия, идеями, хорошими воспоминаниями, желанием стремиться к новым целям, соблюдать режим, новые друзья — все это нам подарила Валдайская </p>
+								<div class="author-and-data">
+									<div class="author">Юлия Левченко</div>
+									<div class="data">26.08.2019</div>
+								</div>
+							</li>
+							<li>
+								<p>По рекомендациям интернета мы попали в этот замечательный лагерь. Впечатления превзошли все наши ожидания (несмотря на тропические ливни каждый день). Прекрасный коллектив сотрудников. Люди очень ответственные, увлеченные, любящие и понимающие детей, внимательные к взрослым.</p>
+								<div class="author-and-data">
+									<div class="author">Ивановы Тамара, Владимир<br> и внук Андрей</div>
+									<div class="data">21.07.2019</div>
+								</div>
+							</li>
+						
 						</ul>
 						<ul class="rate">
 							<li><img src="./images/main/rewiev/booking.png" alt="booking"></li>
@@ -611,11 +634,23 @@
 			<section class="map-road">
 				<div class="map-block">
 					<img src="./images/main/maps/map.png" alt="map road">
-				</div>
-				
-				<div class="layout">
-					
-
+					<div class="layout">
+						<div class="inform-road">
+							<div class="exit-city">
+								<button class="active"><img src="./images/main/maps/star-white.png" alt="star-white">Из Москвы</button>
+								<button><img src="./images/main/maps/anchor.png" alt="anchor">Из Санкт-Петербурга</button>
+							</div>
+							<div class="address">
+								<h4>Еврокемпинг<br>«Робинзонада»</h4>
+								<p>Россия, Новгородская область, Валдайский район, Ивантеевское сельское поселение</p>
+								<span><b>GPS:</b>  57.734648, 33.088664 <img src="./images/main/maps/copy.png" alt=""></span>
+							</div>
+						</div>
+						<div class="approach">
+							<button><img src="./images/main/maps/plus.png" alt="minus"></button>
+							<button><img src="./images/main/maps/minus.png" alt="minus"></button>
+						</div>
+					</div>
 				</div>
 				<div class="follow-us">
 					<div class="layout">

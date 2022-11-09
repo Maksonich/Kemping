@@ -63,18 +63,39 @@
                         height:160px;
                         margin-right: 40px;
                         img{
-                            width: 100%;
-                            height: 100%;
+                            width: 212px;
+                            height: 160px;
                         }
                     }
-                    button{
+                    .slick-prev{
+                        opacity: 0;
+                        
                         position: absolute;
-                        top: 50%;
-                        left: 270px;
-                        width: 56px;
-                        height: 56px;
+                        top: -100px;
+                        left: 0;
+        
+                        width: 80px;
+                        height: 80px;
+                        display: none;
+                    }
+                    .slick-next{
+                        background-image: url(../images/main/icons/arrow-right-orange.png);
+                        background-repeat: no-repeat;
+                        background-position: 20px;
                         border-radius: 50%;
+                        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
+                        background-color: #fff;
                         border: none;
+                        font-size: 0;
+                        cursor: pointer;
+        
+                        position: absolute;
+                        // transform: translateY(-50%);
+                        top: 50%;
+                        left:290px;
+        
+                        width: 56px;
+                        height:56px;
                     }
                 }
                 .description-room {

@@ -131,6 +131,81 @@ section {
   #wrapper.displey-none {
     display: none; } }
 
+/* Slider */
+.slick-slider {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow-x: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
 header {
   display: block;
   position: relative;
@@ -1409,16 +1484,32 @@ footer {
           height: 160px;
           margin-right: 40px; }
           .map-kemping .layout .content .right-sidebar ul.rooms li img {
-            width: 100%;
-            height: 100%; }
-        .map-kemping .layout .content .right-sidebar ul.rooms button {
+            width: 212px;
+            height: 160px; }
+        .map-kemping .layout .content .right-sidebar ul.rooms .slick-prev {
+          opacity: 0;
+          position: absolute;
+          top: -100px;
+          left: 0;
+          width: 80px;
+          height: 80px;
+          display: none; }
+        .map-kemping .layout .content .right-sidebar ul.rooms .slick-next {
+          background-image: url(../images/main/icons/arrow-right-orange.png);
+          background-repeat: no-repeat;
+          background-position: 20px;
+          border-radius: 50%;
+          -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
+          background-color: #fff;
+          border: none;
+          font-size: 0;
+          cursor: pointer;
           position: absolute;
           top: 50%;
-          left: 270px;
+          left: 290px;
           width: 56px;
-          height: 56px;
-          border-radius: 50%;
-          border: none; }
+          height: 56px; }
       .map-kemping .layout .content .right-sidebar .description-room {
         margin-top: 31px;
         padding: 0 0 0 48px; }
@@ -1545,43 +1636,57 @@ footer {
 .slider-photo {
   margin-top: 108px;
   padding: 64px 0 112px 0;
-  background-color: #fafafb; }
+  background-color: #fafafb;
+  position: relative; }
   .slider-photo .layout ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: relative; }
-    .slider-photo .layout ul button {
-      position: absolute;
+    position: relative;
+    max-height: 508px; }
+    .slider-photo .layout ul .slick-prev {
+      background-image: url(../images/main/icons/arrow-left-orange.png);
+      background-repeat: no-repeat;
+      background-position: 30px;
+      background-size: 16px;
       border-radius: 50%;
       -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
       background-color: #fff;
       border: none;
-      cursor: pointer; }
-      .slider-photo .layout ul button:first-child {
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        left: 400px;
-        width: 80px;
-        height: 80px; }
-        .slider-photo .layout ul button:first-child img {
-          width: 21px;
-          height: 21px; }
-      .slider-photo .layout ul button:last-child {
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        top: 50%;
-        right: 400px;
-        width: 80px;
-        height: 80px; }
-        .slider-photo .layout ul button:last-child img {
-          width: 21px;
-          height: 21px; }
+      cursor: pointer;
+      font-size: 0;
+      z-index: 3;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 400px;
+      width: 80px;
+      height: 80px; }
+    .slider-photo .layout ul .slick-next {
+      background-image: url(../images/main/icons/arrow-right-orange.png);
+      background-repeat: no-repeat;
+      background-position: 30px;
+      border-radius: 50%;
+      -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
+      background-color: #fff;
+      border: none;
+      font-size: 0;
+      cursor: pointer;
+      position: absolute;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      top: 50%;
+      right: 400px;
+      width: 80px;
+      height: 80px; }
     .slider-photo .layout ul li {
+      width: 710px;
+      height: 428px;
       margin: 0 40px; }
       .slider-photo .layout ul li img {
         height: 100%;
@@ -1608,7 +1713,11 @@ footer {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      position: relative; }
+      position: relative;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 384px; }
       .review .layout .content ul.comments li {
         font-family: 'Gilroy';
         font-style: normal;
@@ -1625,6 +1734,8 @@ footer {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
+        position: relative;
+        top: 10px;
         width: 448px;
         height: 344px;
         margin: 0 12px;
@@ -1638,41 +1749,64 @@ footer {
           -webkit-box-pack: justify;
           -ms-flex-pack: justify;
           justify-content: space-between;
+          -webkit-box-align: end;
+          -ms-flex-align: end;
+          align-items: flex-end;
           font-family: 'Gilroy';
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
           line-height: 24px; }
-      .review .layout .content ul.comments button {
-        position: absolute;
+          .review .layout .content ul.comments li .author-and-data .author,
+          .review .layout .content ul.comments li .author-and-data .data {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 24px;
+            color: #666F78; }
+      .review .layout .content ul.comments .slick-prev {
+        background-image: url(../images/main/icons/arrow-left-orange.png);
+        background-repeat: no-repeat;
+        background-position: 30px;
+        background-size: 16px;
         border-radius: 50%;
         -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
         background-color: #fff;
         border: none;
-        cursor: pointer; }
-        .review .layout .content ul.comments button:first-child {
-          top: 50%;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-          left: -30px;
-          width: 80px;
-          height: 80px; }
-          .review .layout .content ul.comments button:first-child img {
-            width: 21px;
-            height: 21px; }
-        .review .layout .content ul.comments button:last-child {
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-          top: 50%;
-          right: -30px;
-          width: 80px;
-          height: 80px; }
-          .review .layout .content ul.comments button:last-child img {
-            width: 21px;
-            height: 21px; }
+        cursor: pointer;
+        font-size: 0;
+        z-index: 3;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: -30px;
+        width: 80px;
+        height: 80px; }
+      .review .layout .content ul.comments .slick-next {
+        background-image: url(../images/main/icons/arrow-right-orange.png);
+        background-repeat: no-repeat;
+        background-position: 30px;
+        border-radius: 50%;
+        -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
+        background-color: #fff;
+        border: none;
+        font-size: 0;
+        cursor: pointer;
+        position: absolute;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        top: 50%;
+        right: -30px;
+        width: 80px;
+        height: 80px;
+        width: 80px;
+        height: 80px; }
     .review .layout .content ul.rate {
       margin: 77px auto 0 auto;
       display: -webkit-box;
@@ -1682,37 +1816,184 @@ footer {
       -ms-flex-pack: space-evenly;
       justify-content: space-evenly; }
 
-.map-road {
-  width: 100vw; }
-  .map-road .follow-us {
-    background-color: #bf5002; }
-    .map-road .follow-us .layout {
-      height: 120px;
+.map-road .map-block {
+  margin: auto;
+  width: 1920px;
+  height: 576px;
+  position: relative; }
+  .map-road .map-block img {
+    position: absolute;
+    z-index: -2; }
+  .map-road .map-block .layout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    height: 100%; }
+    .map-road .map-block .layout::before {
+      content: url(/images/main/maps/dotA.png);
+      position: absolute;
+      top: 465px;
+      left: 1045px;
+      z-index: 2; }
+    .map-road .map-block .layout::after {
+      content: url(/images/main/maps/dotA.png);
+      position: absolute;
+      top: 135px;
+      left: 630px;
+      z-index: 2; }
+    .map-road .map-block .layout .inform-road {
+      margin-top: 33px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .map-road .map-block .layout .inform-road .exit-city button {
+        height: 56px;
+        margin: 0;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: #000000;
+        border: none;
+        position: relative;
+        background-color: #FFFFFF; }
+        .map-road .map-block .layout .inform-road .exit-city button:first-child {
+          width: 170px;
+          border-radius: 10px 0px 0px 10px; }
+          .map-road .map-block .layout .inform-road .exit-city button:first-child img {
+            position: absolute;
+            z-index: 3;
+            top: 15px;
+            left: 10px;
+            width: 23px;
+            height: 22px; }
+        .map-road .map-block .layout .inform-road .exit-city button:last-child {
+          width: 261px;
+          margin-left: -6px;
+          border-radius: 0px 10px 10px 0px; }
+          .map-road .map-block .layout .inform-road .exit-city button:last-child img {
+            position: absolute;
+            z-index: 3;
+            top: 15px;
+            left: 10px;
+            width: 23px;
+            height: 22px; }
+      .map-road .map-block .layout .inform-road .exit-city button.active {
+        color: #FFFFFF;
+        background-color: #bf5002; }
+      .map-road .map-block .layout .inform-road .address {
+        margin-top: 111px;
+        width: 368px;
+        height: 288px;
+        padding: 32px 34px;
+        background: #FFFFFF;
+        -webkit-box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05), 0px 0.1px 0.3px rgba(0, 0, 0, 0.014), 0px 0.3px 0.8px rgba(0, 0, 0, 0.02), 0px 0.5px 1.5px rgba(0, 0, 0, 0.025), 0px 0.9px 2.7px rgba(0, 0, 0, 0.03), 0px 1.7px 5px rgba(0, 0, 0, 0.036);
+        border-radius: 10px; }
+        .map-road .map-block .layout .inform-road .address h4 {
+          font-family: 'Gilroy';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+          color: #000000; }
+        .map-road .map-block .layout .inform-road .address p {
+          font-family: 'Gilroy';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          margin-top: 24px;
+          margin-bottom: 30px; }
+        .map-road .map-block .layout .inform-road .address span {
+          font-family: 'Gilroy';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 24px;
+          color: #000000; }
+    .map-road .map-block .layout .approach {
+      margin-top: 232px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .map-road .map-block .layout .approach button {
+        height: 56px;
+        width: 48px;
+        border: none;
+        background-color: #FFFFFF;
+        position: relative;
+        border-radius: 10px; }
+        .map-road .map-block .layout .approach button:first-child img {
+          position: absolute;
+          top: 18px;
+          left: 50%;
+          -webkit-transform: translate(-50%);
+          -ms-transform: translate(-50%);
+          transform: translate(-50%);
+          z-index: 9;
+          width: 20px;
+          height: 20px; }
+        .map-road .map-block .layout .approach button:last-child img {
+          position: absolute;
+          top: 16px;
+          left: 50%;
+          -webkit-transform: translate(-50%);
+          -ms-transform: translate(-50%);
+          transform: translate(-50%);
+          z-index: 9;
+          width: 20px;
+          height: 20px; }
+        .map-road .map-block .layout .approach button img {
+          width: 16px;
+          height: 2px; }
+
+.map-road .follow-us {
+  background-color: #bf5002; }
+  .map-road .follow-us .layout {
+    height: 120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .map-road .follow-us .layout .img-mail {
+      margin-right: 26px; }
+    .map-road .follow-us .layout h4 {
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; }
-      .map-road .follow-us .layout .img-mail {
-        margin-right: 26px; }
-      .map-road .follow-us .layout h4 {
-        font-family: 'Gilroy';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 29px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        color: #FFFFFF;
-        width: 288px; }
+      color: #FFFFFF;
+      width: 288px; }
+    .map-road .follow-us .layout form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
       .map-road .follow-us .layout form input {
         width: 416px;
         height: 56px;
@@ -1727,7 +2008,6 @@ footer {
         background-color: #bf5002;
         opacity: 0.4; }
       .map-road .follow-us .layout form button {
-        margin-left: -5px;
         width: 175px;
         height: 56px;
         border: 1px solid #FFFFFF;
